@@ -1,8 +1,15 @@
 # granny-connect-backend
 
-Granny Connect Backend is a service that is written in JAVA and packaged in Docker.
+Granny Connect Backend.
 
-The services is used to serve the ionic-interface for Granny-Connect.
+The service is used to serve the ionic-interface for Granny-Connect.
+
+It is a service that is written in JAVA and packaged in Docker.
+
+
+
+
+
 
 ## Build Granny-Connect-Backend
 
