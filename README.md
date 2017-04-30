@@ -2,6 +2,7 @@
 
 Granny-Connect is an application for caregivers in the relative sense. The main tasks are:
 
+ * Health check caregiver
  * Managing perscriptions
    * Perscription agenda
    * Pharmaceutical appointments
