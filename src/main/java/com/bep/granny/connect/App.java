@@ -1,6 +1,6 @@
 package com.bep.granny.connect;
 
-import com.bep.granny.connect.controllers.VideoController;
+import com.bep.granny.connect.controllers.AuthenitcationController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -14,7 +14,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class App {
 
     public static void main(String[] args) throws Exception {
-        SpringApplication.run(VideoController.class, args);
+        SpringApplication.run(AuthenitcationController.class, args);
     }
 
 }

@@ -6,5 +6,5 @@ import org.springframework.web.bind.annotation.RestController;
  * @author sido
  */
 @RestController
-public class VideoController {
+public class AuthenitcationController {
 }
