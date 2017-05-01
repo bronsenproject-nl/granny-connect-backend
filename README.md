@@ -2,27 +2,31 @@
 
 Granny-Connect is an application for caregivers in the relative sense. The main tasks are:
 
- * Health check caregiver
- * Managing perscriptions
-   * Perscription agenda
-   * Pharmaceutical appointments
- * Managing contacts / appointments (formal and informal)
-   * Docter appointments
-   * Relative appointments
- * Resource management
-   * "Zorgvinder?"
-   * Caregiver support
- * Logbook
-   * Weight
-   * Temperature
+It has 2 main functions. Check the mental and emotional health of the caregiver and record the physical, emtional and mental heatlth of the caretaker(s).
 
-# granny-connect-backend
+ * **Caregiver**
+   * Health check caregiver
+   * Resource management
+     * "Zorgvinder?"
+     * Caregiver support
+ * **Caretaker(s)**
+   * Managing perscriptions
+     * Perscription agenda
+     * Pharmaceutical appointments
+   * Managing appointments (formal and informal)
+     * Docter appointments
+     * Relative appointments
+   * Logbook
+     * Weight
+     * Temperature
+
+# granny-connect-rest-api
 The service is used to serve the ionic-interface for Granny-Connect.
 
 It is a service that is written in JAVA and packaged in Docker.
 
 
-## Build Granny-Connect-Backend
+## Build granny-connect-rest-api
 
 Please run to build with maven:
 
@@ -30,10 +34,10 @@ Please run to build with maven:
 
 To package in Docker please run:
 
-```docker build -t granny-connect-backend```
+```docker build -t granny-connect-rest-api```
 
-## Run Granny-Connect-Backend
+## Run granny-connect-rest-api
 
 Please run:
 
-```docker run granny-connect-backend```
+```docker run granny-connect-rest-api```
