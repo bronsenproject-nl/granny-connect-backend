@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.bep</groupId>
-    <artifactId>granny-connect-backend</artifactId>
+    <artifactId>granny-connect-rest-api</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
     <parent>
