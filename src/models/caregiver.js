@@ -1,24 +1,31 @@
 'use strict'
 
-
 module.exports = (dbconn) => {
 
   return {
     findAll : () => {
-      return new Promise((resolve, reject) => {
-        dbconn.query('SELECT * FROM caregiver', [], (error, categories) => {
-          if (error) return reject(error)
-          resolve(caregivers)
+      return dbconn.any('SELECT * FROM caregiver', [])
+        .then(caregivers => {
+          console.log(caregivers);
         })
-      })
+        .catch(error =>  {
+          console.log(error);
+        })
+        .finally(() => {
+          dbconn.end();
+        });
     }
    ,findById : (caregiver_id) => {
-      return new Promise((resolve, reject) => {
-        dbconn.query('SELECT * FROM caregiver WHERE id=?', [caregiver_id], (error, category) => {
-          if (error) return reject(error)
-          resolve(caregiver)
+      return dbconn.query('SELECT * FROM caregiver WHERE id=?', [caregiver_id])
+        .then(caregivers => {
+          console.log(caregivers);
         })
-      })
+        .catch(error => {
+          console.log(error);
+        })
+        .finally(() => {
+          dbconn.end();
+        });
     }
   }
 }

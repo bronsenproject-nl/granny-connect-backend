@@ -8,10 +8,11 @@ module.exports = () => {
     'env'       : 'production'
    ,'port'      : 11000
    ,'database'  : { 
-      database    : 'grannyconnect'
-     ,host        : 'database'
-     ,user        : 'root'
-     ,password    : 'my-secret'
+      schema    : 'grannyconnect'
+     ,host      : 'localhost'
+     ,port      : 5432
+     ,user        : 'granny'
+     ,password    : '?granny!'
     }
    ,'token'     : {
       secret : '87qiwudIUD&@^uy3e9qwdsoqlsn'
