@@ -1,12 +1,9 @@
 CREATE SCHEMA grannyconnect;
 
--- setup user for grannyconnect
-CREATE USER granny WITH PASSWORD '?granny!';
-
 -- set right grants on schema grannyconnect
-GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA grannyconnect TO granny;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA grannyconnect TO grannyconnect;
 ALTER DEFAULT PRIVILEGES IN SCHEMA grannyconnect
-  GRANT ALL PRIVILEGES ON TABLES TO granny;
+  GRANT ALL PRIVILEGES ON TABLES TO grannyconnect;
 
 -- careteam : careteams in granny-connect
 CREATE TABLE careteam (

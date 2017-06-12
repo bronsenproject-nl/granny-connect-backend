@@ -1,4 +1,3 @@
-
 FROM mhart/alpine-node:6
 
 # install the tools we need

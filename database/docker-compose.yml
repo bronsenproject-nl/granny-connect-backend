@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  grannyconnect-postgressql:
+    build: .
+    ports:
+      - "5432:5432"
+    environment:
+      - DEBUG=false
+      - POSTGRES_DB=grannyconnect
+      - POSTGRES_USER=grannyconnect
+      - POSTGRES_PASSWORD=grannyconnect
+    volumes:
+      - /srv/docker/postgresql:/var/lib/postgresql
