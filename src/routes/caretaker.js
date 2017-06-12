@@ -28,7 +28,10 @@ module.exports = (context) => {
   routes.get('/', authenticate, (req, res, next) => {
     caretaker_service.findAll()
       .then((caretakers) => res.json(caretakers))
-      .catch((reason) => res.sendStatus(500))
+      .catch((reason) => {
+        console.log(reason);
+        res.sendStatus(500);
+      })
   })
 
 

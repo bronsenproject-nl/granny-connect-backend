@@ -7,39 +7,37 @@ module.exports = (dbconn) => {
 
   const mapDbObjectToTransferObject = (caretaker_row) => {
     return new CareTaker(caretaker_row.caretaker_id
-                       ,caretaker_row.name)
+                        ,caretaker_row.name)
   }
 
   return {
-      findByAll : => {
-        return new Promise((resolve, reject) => {
-          caretaker_model.findByAll()
-            .then((caretakers) => {
-              let cts = []
-              caretakers.forEach((caretaker) => {
-                cts.push(mapDbObjectToTransferObject(caretaker))
-              })
-              resolve(cts )
+    findAll : () => {
+      return new Promise((resolve, reject) => {
+        caretaker_model.findAll()
+          .then((caretakers) => {
+            let ctakers = []
+            caretakers.forEach((caretaker) => {
+              ctakers.push(mapDbObjectToTransferObject(caretaker))
             })
-            .catch((reason) => reject(reason))
-        })
-      }
+            resolve(ctakers)
+          })
+          .catch((reason) => reject(reason))
+      })
     }
-
-  return {
-    findById : (caretaker_id) => {
+    ,findById : (caretaker_id) => {
       return new Promise((resolve, reject) => {
         caretaker_model.findById(caretaker_id)
           .then((caretakers) => {
-            let cts = []
+            let ctakers = []
             caretakers.forEach((caretaker) => {
-              cts.push(mapDbObjectToTransferObject(caretaker))
+              ctakers.push(mapDbObjectToTransferObject(caretaker))
             })
-            resolve(cts )
+            resolve(ctakers)
           })
           .catch((reason) => reject(reason))
       })
     }
   }
+
 }
 
