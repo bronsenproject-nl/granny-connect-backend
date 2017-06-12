@@ -1,0 +1,23 @@
+{
+  "name": "doorman",
+  "version": "0.0.1",
+  "description": "Connect middleware to secures express route with bearer token authentication",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "// comment": "npm test",
+    "test": "JASMINE_CONFIG_PATH=tests/support/jasmine.json node_modules/jasmine/bin/jasmine.js",
+    "preversion": "npm test",
+    "postversion": "git push && git push --tags"
+  },
+  "author": "Sido Haakma",
+  "license": "All rights reserved",
+  "devDependencies": {
+    "jasmine": "^2.4.1"
+  },
+  "dependencies": {
+    "jsonwebtoken": "^6.2.0"
+  }
+}

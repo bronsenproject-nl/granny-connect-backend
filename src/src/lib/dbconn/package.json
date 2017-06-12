@@ -1,0 +1,11 @@
+{
+  "name": "mysql-dbconn",
+  "version": "0.0.1",
+  "description": "Mysql db connection",
+  "main": "index.js",
+  "author": "Sido Haakma",
+  "license": "All rights reserved",
+  "dependencies": {
+    "mysql": "^2.12.0"
+  }
+}

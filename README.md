@@ -26,17 +26,19 @@ The service is used to serve the ionic-interface for Granny-Connect.
 It is a service that is written in JAVA and packaged in Docker.
 
 
-## Build granny-connect-rest-api
+## Build granny-connect-backend
 
 Please run to build with maven:
 
-```mvn package```
+ `npm install`  
+ `npm run build`  
+ `npm run start -- --database:host localhost`  
 
 To package in Docker please run:
 
 ```docker build -t granny-connect-rest-api```
 
-## Run granny-connect-rest-api
+## Run granny-connect-backend
 
 Please run:
 

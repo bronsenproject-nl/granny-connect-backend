@@ -1,0 +1,36 @@
+{
+  "name": "grannyconnect-api",
+  "version": "0.0.1",
+  "description": "GrannyConnect backend api",
+  "main": "build/index.js",
+  "// comment": "npm version major|minor|patch",
+  "scripts": {
+    "//" : "npm run start -- --env development --database:host localhost",
+    "start": "node build/index.js",
+    "//" : "npm run build",
+    "build": "node_modules/typescript/bin/tsc",
+    "test": "JASMINE_CONFIG_PATH=src/tests/support/jasmine.json node_modules/jasmine/bin/jasmine.js",
+    "preversion": "npm test",
+    "postversion": "git push && git push --tags",
+    "install-production": "npm install --production"
+  },
+  "devDependencies": {
+    "@types/node": "^7.0.14",
+    "jasmine": "^2.4.1",
+    "typescript": "^2.3.2"
+  },
+  "author": "Sido Haakma",
+  "license": "All rights reserved",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "cors": "^2.7.1",
+    "express": "^4.13.4",
+    "helmet": "^2.0.0",
+    "jsonwebtoken": "^5.7.0",
+    "log4js": "^0.6.33",
+    "mysql": "^2.12.0",
+    "nconf": "^0.8.4",
+    "request": "^2.71.0",
+    "uuid": "^3.0.1"
+  }
+}
