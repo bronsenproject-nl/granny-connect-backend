@@ -14,7 +14,7 @@ const logger  = log4js.getLogger(pkg.name)
 const cors    = require('cors')
 const helmet  = require('helmet')
 
-const Context = require('./Context')
+const Context = require('./context')
 
 
 /* start service */
@@ -35,7 +35,7 @@ const server = app.listen(config.get('port'), () => {
   const context = new Context(
       logger
      ,config
-//     ,require('./lib/doorman')(config.get('token:secret'))
+     ,require('./lib/doorman')(config.get('token:secret'))
      ,require('./lib/dbconn')(config)
   )
 
