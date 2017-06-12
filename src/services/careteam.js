@@ -11,20 +11,20 @@ module.exports = (dbconn) => {
   }
 
   return {
-    findAll : (test)=> {
-        return new Promise((resolve, reject) => {
-          careteam_model.findAll()
-            .then((careteams) => {
-              let cteams = []
-              careteams.forEach((careteam) => {
-                cteams.push(mapDbObjectToTransferObject(careteam))
-              })
-              resolve(cteams)
+    findAll : () => {
+      return new Promise((resolve, reject) => {
+        careteam_model.findAll()
+          .then((careteams) => {
+            let cteams = []
+            careteams.forEach((careteam) => {
+              cteams.push(mapDbObjectToTransferObject(careteam))
             })
-            .catch((reason) => reject(reason))
+            resolve(cteams)
+          })
+          .catch((reason) => reject(reason))
         })
-      }
-    ,findById : (careteam_id) => {
+    }
+   ,findById : (careteam_id) => {
       return new Promise((resolve, reject) => {
         careteam_model.findById(careteam_id)
           .then((careteams) => {
@@ -35,7 +35,7 @@ module.exports = (dbconn) => {
             resolve(cteams)
           })
           .catch((reason) => reject(reason))
-      })
+        })
     }
   }
 }

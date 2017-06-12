@@ -30,6 +30,20 @@ The service is used to serve the ionic-interface for Granny-Connect. It is writt
 * To build the NPM modules, please run: `npm install`  
 * To transpile the TypeScript files, please run: `npm run build`  
 * To package in Docker, please run: `docker build -t granny-connect-api`
+  * Upgrade Docker to new version on Ubunut
+  
+  add key
+  * sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+
+
+add repo
+
+sudo add-apt-repository \
+  "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) \
+  stable"
+  
+   sudo apt-get install docker-ce
 
 ## Run granny-connect-backend
 

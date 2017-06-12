@@ -7,23 +7,36 @@ module.exports = (dbconn) => {
 
   const mapDbObjectToTransferObject = (caretaker_row) => {
     return new CareGiver(caregiver_row.caregiver_id
-                       ,caregiver_row.name)
+                        ,caregiver_row.name)
   }
 
-//  return {
-//    findByEventId : (event_id) => {
-//      return new Promise((resolve, reject) => {
-//        category_model.findByEventId(event_id)
-//          .then((categories) => {
-//            let ctgrs = []
-//            categories.forEach((category) => {
-//              ctgrs.push(mapDbObjectToTransferObject(category))
-//            })
-//            resolve(ctgrs)
-//          })
-//          .catch((reason) => reject(reason))
-//      })
-//    }
-//  }
+  return {
+    findAll : () => {
+      return new Promise((resolve, reject) => {
+        caregiver_model.findAll()
+          .then((caregivers) => {
+            let cgivers = []
+            caregivers.forEach((caregiver) => {
+              cgivers.push(mapDbObjectToTransferObject(caregiver))
+            })
+            resolve(cgivers)
+          })
+          .catch((reason) => reject(reason))
+        })
+   }
+  ,findById : (caregiver_id) => {
+      return new Promise((resolve, reject) => {
+        caregiver_model.findById(caregiver_id)
+          .then((caregivers) => {
+          let cgivers = []
+          caregivers.forEach((caregiver) => {
+            cgivers.push(mapDbObjectToTransferObject(caregiver))
+          })
+          resolve(cgivers)
+        })
+        .catch((reason) => reject(reason))
+      })
+    }
+  }
 }
 

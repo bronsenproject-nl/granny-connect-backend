@@ -11,8 +11,8 @@ module.exports = () => {
       schema    : 'grannyconnect'
      ,host      : 'localhost'
      ,port      : 5432
-     ,user        : 'granny'
-     ,password    : '?granny!'
+     ,user        : 'grannyconnect'
+     ,password    : 'grannyconnect'
     }
    ,'token'     : {
       secret : '87qiwudIUD&@^uy3e9qwdsoqlsn'
